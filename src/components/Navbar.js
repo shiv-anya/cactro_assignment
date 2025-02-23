@@ -9,7 +9,7 @@ const Navbar = () => {
         hours
       </div>
       <div>
-        <ul className="flex text-base gap-5 font-thin items-center">
+        <ul className="flex text-base gap-8 font-thin items-center">
           <li className="cursor-pointer hover:border-b-2 hover:border-b-[#00ffff] hover:border-b-2 hover:border-b-[#00ffff]">
             Dashboard
           </li>
@@ -31,7 +31,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="flex gap-5 items-center">
-        <div className="relative">
+        <div className="relative text-xl">
           <LuBell />
           <div className="size-1 bg-red-500 rounded-full absolute top-0 right-1"></div>
         </div>

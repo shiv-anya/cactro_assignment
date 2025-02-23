@@ -39,9 +39,10 @@ const InfoBar = () => {
     },
   ];
   return (
-    <section className="flex w-4/5 gap-5 my-5 h-[150px]">
+    <section className="flex w-full gap-5 my-5 h-[25%]">
       {details.map((detail) => (
         <InfoCard
+          key={detail.title}
           icon={detail.icon}
           number={detail.number}
           title={detail.title}

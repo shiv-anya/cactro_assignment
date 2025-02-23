@@ -71,7 +71,7 @@ const Budget = () => {
               className="cursor-pointer border-2 border-[#2E8B57] rounded-lg hover:bg-[#2E8B57] hover:text-white flex px-3 py-2 items-center capitalize gap-2"
               key={detail.title}
             >
-              <div>{detail.icon}</div>
+              <div className="text-lg">{detail.icon}</div>
               <div>{detail.title}</div>
             </div>
           ))}
@@ -87,6 +87,7 @@ const Budget = () => {
             time={detail.time}
             progress={detail.progress}
             state={detail.state}
+            key={detail.title}
           />
         ))}
       </div>

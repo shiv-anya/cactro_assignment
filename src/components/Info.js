@@ -5,8 +5,14 @@ import MoodBoard from "./MoodBoard";
 
 const Info = () => {
   return (
-    <section className="h-screen">
-      <InfoBar />
+    <section className="h-screen flex gap-5">
+      <div className="h-full w-4/5">
+        <InfoBar />
+        <Chart />
+      </div>
+      <div className="w-1/5">
+        <MoodBoard />
+      </div>
     </section>
   );
 };
