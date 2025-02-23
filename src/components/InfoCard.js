@@ -5,7 +5,7 @@ const InfoCard = ({ icon, number, title, state }) => {
   return (
     <Card
       className={`w-full flex flex-col justify-evenly px-5 ${
-        state === "delayed" ? "text-white bg-red-300" : "text-[#333]"
+        state === "delayed" ? "text-red-500 bg-red-300" : "text-[#333]"
       }`}
     >
       <div

@@ -7,6 +7,11 @@ const BudgetCard = ({ title, name, budget, profit, time, progress, state }) => {
     else if (state === "warning") return "bg-yellow-500";
     else return "bg-[#2E8B57]";
   };
+  const getBgColor = (state) => {
+    if (state === "failed") return "bg-red-200";
+    else if (state === "warning") return "bg-yellow-200";
+    else return "bg-green-200";
+  };
   return (
     <Card className="w-full text-sm p-4">
       <div className="flex justify-between items-center">
@@ -23,7 +28,7 @@ const BudgetCard = ({ title, name, budget, profit, time, progress, state }) => {
         </div>
       </div>
       <div className="text-xs my-2">
-        <div className="flex w-[70%] text-gray-400 justify-between ">
+        <div className={`flex w-[70%] text-gray-400 justify-between`}>
           <p>Total Budget:</p>
           <p className="text-gray-600">{budget} &#8364;</p>
         </div>
@@ -38,7 +43,7 @@ const BudgetCard = ({ title, name, budget, profit, time, progress, state }) => {
           </p>
         </div>
       </div>
-      <div className={`w-full bg-gray-200 rounded-full h-3 my-3`}>
+      <div className={`w-full ${getBgColor(state)} rounded-full h-3 my-3`}>
         <div
           className={`${getColor(state)} h-3 rounded-l-full ${
             progress === 100 && "rounded-full"
